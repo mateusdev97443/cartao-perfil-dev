@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartão de Perfil - Mateus Ernandes</title>
+    <style>
+        /* AQUI ESTÁ O SEU BUNKER NA PRÁTICA: O Reset Sagrado */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* O Cheat Code que você documentou! */
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #1a2a6c);
+        }
+
+        .cartao-perfil {
+            width: 300px;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .cabecalho {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .cabecalho h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .cabecalho p {
+            opacity: 0.8;
+            font-size: 16px;
+        }
+
+        .conteudo {
+            padding: 25px;
+        }
+
+        .conteudo p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        /* TESTE DA CASCATA: O ID (Capitão) vs Classe (Soldado) */
+        #botao-acao {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            width: 100%;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .botao-acao {
+            background: #3498db !important; /* O General (!important) passando por cima do Capitão */
+        }
+
+        #botao-acao:hover {
+            background: #c0392b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cartao-perfil">
+        <div class="cabecalho">
+            <h1>Mateus Ernandes</h1>
+            <p>Front-End em Formação | 28 anos</p>
+        </div>
+        <div class="conteudo">
+            <p>Dev em transição de carreira. Ex-operador de pátio que decidiu virar programador para construir um futuro melhor.</p>
+            <p>Meu objetivo: Ser um Dev Júnior até julho de 2026.</p>
+            <button id="botao-acao" class="botao-acao" onclick="alert('O Mentor está de olho!')">Iniciar Carreira</button>
+        </div>
+    </div>
+
+</body>
+</html>
